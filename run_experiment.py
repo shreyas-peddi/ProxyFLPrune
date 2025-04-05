@@ -29,9 +29,9 @@ results_dir = "resultsfashionmnistpruneepoch6"
 
 # Create results directory if it doesn't exist
 os.makedirs(results_dir, exist_ok=True)
-#,'Regular', 'Joint', 'AvgPush', 'FedAvg', 'FML', 'ProxyFL'
+
 for major_percent in major_percent_values:
-    for algorithm in ['ProxyFLPrune']:
+    for algorithm in ['ProxyFLPrune','Regular', 'Joint', 'AvgPush', 'FedAvg', 'FML', 'ProxyFL']:
         for sd in range(5):
             # Prepare command for MPI execution
             cmd = [
